@@ -1,7 +1,0 @@
-{
-  "name": "vazi-app",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
