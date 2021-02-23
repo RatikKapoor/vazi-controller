@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import robot from 'robotjs';
 import icon from '../assets/icon.svg';
 import './App.global.css';
+import SerialPort, {list, PortInfo} from 'serialport';
+import Select from "react-select";
 
 // enum Quadrant {
 //   TopLeft,
@@ -18,9 +20,37 @@ interface QuadrantColours {
   bottomRight: string;
 }
 
+interface ValueLabelPair {
+  value: string;
+  label: string;
+}
+
 const Main = () => {
   const [avgColour, setAvgColour] = useState<QuadrantColours>();
-  const { height, width } = robot.screen.capture();
+  const { height, width } = robot.getScreenSize();
+  const [serialPorts, setSerialPorts] = useState<PortInfo[]>();
+  const [selectedPort, setSelectedPort] = useState<string>();
+  let port:SerialPort;
+  let lineStream:SerialPort.parsers.Readline;
+  const Readline = SerialPort.parsers.Readline;
+  // const sp = new serialport('/dev/tty.SLAB_USBtoUART', {
+  //   baudRate: 115200,
+  // });
+
+  useEffect(() => {
+    list().then((ports) => {
+      console.log(ports)
+      setSerialPorts(ports);
+    })
+  }, [])
+
+  const getPortValueLabel = ():ValueLabelPair[] => {
+    let result: ValueLabelPair[] = [];
+    serialPorts?.forEach(port => {
+      result.push({value: port.path, label: port.path})
+    })
+    return result;
+  }
 
   const calculateQuadrantColours = () => {
     let topLeft: string = robot.screen.capture().colorAt(width / 4, height / 4);
@@ -39,8 +69,23 @@ const Main = () => {
       bottomLeft: bottomLeft,
       bottomRight: bottomRight,
     });
-    console.log(avgColour);
   };
+
+  const connectSerialPort = () => {
+    if (selectedPort != undefined && selectedPort.length > 1) {
+      port = new SerialPort(selectedPort, {
+        baudRate: 115200
+      });
+      lineStream = port.pipe(new Readline({delimiter: '\r\n'}));
+    }
+  }
+
+  const disconnectSerialPort = () => {
+    if (port != undefined) {
+      port.destroy();
+      lineStream.destroy();
+    }
+  }
 
   return (
     <div>
@@ -55,6 +100,9 @@ const Main = () => {
             calculateQuadrantColours();
           }}
         ></button>
+        <Select options={getPortValueLabel()} className="Select" onChange={e => {setSelectedPort(e?.value); console.log(e)}} />
+        <button onClick={() => connectSerialPort()} >Connect</button>
+        <button onClick={() => connectSerialPort()} >Disconnect</button>
       </div>
     </div>
   );
