@@ -71,16 +71,36 @@ void main(void)
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
     
+    /** Code for  */
     // Turn off all LEDs
     for (int i=0; i<256; i++) {
         myLEDArray(0, 0, 0);
     }
-    
+//    
     __delay_ms(1);
+//        PWM6_LoadDutyValue(0);
+//        PWM7_LoadDutyValue(256);
+//        PWM8_LoadDutyValue(0);
 
     while (1)
     {
+        while (1) myLEDArray(255,255,255);
         // Add your application code
+        PWM6_LoadDutyValue(51);
+        PWM7_LoadDutyValue(229);
+        PWM8_LoadDutyValue(235/2);
+        myLEDArray(255, 255, 255);
+        __delay_ms(1000);
+        PWM6_LoadDutyValue(225);
+        PWM7_LoadDutyValue(52);
+        PWM8_LoadDutyValue(235);
+        myLEDArray(250, 100, 30);
+        __delay_ms(1000);        
+        PWM6_LoadDutyValue(174);
+        PWM7_LoadDutyValue(235);
+        PWM8_LoadDutyValue(52/2);
+        myLEDArray(125, 200, 100);
+        __delay_ms(1000);        
     }
 }
 /**

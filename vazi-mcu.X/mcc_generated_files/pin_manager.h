@@ -77,6 +77,42 @@
 #define RA0_SetAnalogMode()         do { ANSELAbits.ANSELA0 = 1; } while(0)
 #define RA0_SetDigitalMode()        do { ANSELAbits.ANSELA0 = 0; } while(0)
 
+// get/set RA2 procedures
+#define RA2_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)
+#define RA2_SetLow()             do { LATAbits.LATA2 = 0; } while(0)
+#define RA2_Toggle()             do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0)
+#define RA2_GetValue()              PORTAbits.RA2
+#define RA2_SetDigitalInput()    do { TRISAbits.TRISA2 = 1; } while(0)
+#define RA2_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
+#define RA2_SetPullup()             do { WPUAbits.WPUA2 = 1; } while(0)
+#define RA2_ResetPullup()           do { WPUAbits.WPUA2 = 0; } while(0)
+#define RA2_SetAnalogMode()         do { ANSELAbits.ANSELA2 = 1; } while(0)
+#define RA2_SetDigitalMode()        do { ANSELAbits.ANSELA2 = 0; } while(0)
+
+// get/set RA3 procedures
+#define RA3_SetHigh()            do { LATAbits.LATA3 = 1; } while(0)
+#define RA3_SetLow()             do { LATAbits.LATA3 = 0; } while(0)
+#define RA3_Toggle()             do { LATAbits.LATA3 = ~LATAbits.LATA3; } while(0)
+#define RA3_GetValue()              PORTAbits.RA3
+#define RA3_SetDigitalInput()    do { TRISAbits.TRISA3 = 1; } while(0)
+#define RA3_SetDigitalOutput()   do { TRISAbits.TRISA3 = 0; } while(0)
+#define RA3_SetPullup()             do { WPUAbits.WPUA3 = 1; } while(0)
+#define RA3_ResetPullup()           do { WPUAbits.WPUA3 = 0; } while(0)
+#define RA3_SetAnalogMode()         do { ANSELAbits.ANSELA3 = 1; } while(0)
+#define RA3_SetDigitalMode()        do { ANSELAbits.ANSELA3 = 0; } while(0)
+
+// get/set RA4 procedures
+#define RA4_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
+#define RA4_SetLow()             do { LATAbits.LATA4 = 0; } while(0)
+#define RA4_Toggle()             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0)
+#define RA4_GetValue()              PORTAbits.RA4
+#define RA4_SetDigitalInput()    do { TRISAbits.TRISA4 = 1; } while(0)
+#define RA4_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
+#define RA4_SetPullup()             do { WPUAbits.WPUA4 = 1; } while(0)
+#define RA4_ResetPullup()           do { WPUAbits.WPUA4 = 0; } while(0)
+#define RA4_SetAnalogMode()         do { ANSELAbits.ANSELA4 = 1; } while(0)
+#define RA4_SetDigitalMode()        do { ANSELAbits.ANSELA4 = 0; } while(0)
+
 // get/set RB1 procedures
 #define RB1_SetHigh()            do { LATBbits.LATB1 = 1; } while(0)
 #define RB1_SetLow()             do { LATBbits.LATB1 = 0; } while(0)
