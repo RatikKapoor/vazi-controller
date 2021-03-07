@@ -5,6 +5,7 @@ import icon from '../assets/icon.svg';
 import './App.global.css';
 import SerialPort, { list, PortInfo } from 'serialport';
 import Select from 'react-select';
+import _ from 'lodash';
 
 // enum Quadrant {
 //   TopLeft,
@@ -75,6 +76,13 @@ const Main = () => {
     robot.moveMouseSmooth(200, 200);
   };
 
+  const handleSerialInput = (data: string) => {
+    console.log('GOT DATA', data);
+    if (data.includes('bp')) {
+      robot.typeString('w');
+    }
+  };
+
   const connectSerialPort = () => {
     if (selectedPort != undefined && selectedPort.length > 1) {
       port = new SerialPort(selectedPort, {
@@ -83,9 +91,7 @@ const Main = () => {
       });
       lineStream = port.pipe(new Readline({ delimiter: '\n' }));
       console.log('Setup done');
-      lineStream.on('data', (data) => {
-        console.log('GOT DATA: ', data);
-      });
+      lineStream.on('data', handleSerialInput);
     }
   };
 

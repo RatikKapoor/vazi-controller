@@ -62,6 +62,11 @@ void setRGB(uint8_t r, uint8_t g, uint8_t b) {
     PWM8_LoadDutyValue(b);
 }
 
+void handleButtonPress() {
+    printf("bp\n\r");
+    __delay_ms(3);
+}
+
 void main(void)
 {
     // Initialize the device
@@ -84,6 +89,8 @@ void main(void)
 //    }
 //    __delay_ms(1);
  
+    IOCCF0_SetInterruptHandler(handleButtonPress);
+    printf("Ready\n\r");
     while (1)
     {
         setRGB(51, 229, 325);
@@ -91,12 +98,12 @@ void main(void)
         setRGB(225,52,325);
         __delay_ms(1000);       
         setRGB(174, 235, 52);
-        printf("b1");
-        printf(" Count: %u\n",uart1RxCount);
-        while (uart1RxCount != 0) {
-            printf("%c", UART1_Read());
-            if (uart1RxCount == 0) printf("\n");
-        }
+//        printf("b1");
+//        printf(" Count: %u\n",uart1RxCount);
+//        while (uart1RxCount != 0) {
+//            printf("%c", UART1_Read());
+//            if (uart1RxCount == 0) printf("\n");
+//        }
         __delay_ms(1000);        
     }
 }

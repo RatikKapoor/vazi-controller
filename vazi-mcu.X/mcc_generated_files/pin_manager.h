@@ -125,6 +125,26 @@
 #define RB1_SetAnalogMode()         do { ANSELBbits.ANSELB1 = 1; } while(0)
 #define RB1_SetDigitalMode()        do { ANSELBbits.ANSELB1 = 0; } while(0)
 
+// get/set BUTTON aliases
+#define BUTTON_TRIS                 TRISCbits.TRISC0
+#define BUTTON_LAT                  LATCbits.LATC0
+#define BUTTON_PORT                 PORTCbits.RC0
+#define BUTTON_WPU                  WPUCbits.WPUC0
+#define BUTTON_OD                   ODCONCbits.ODCC0
+#define BUTTON_ANS                  ANSELCbits.ANSELC0
+#define BUTTON_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define BUTTON_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define BUTTON_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define BUTTON_GetValue()           PORTCbits.RC0
+#define BUTTON_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define BUTTON_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define BUTTON_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define BUTTON_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define BUTTON_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define BUTTON_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define BUTTON_SetAnalogMode()      do { ANSELCbits.ANSELC0 = 1; } while(0)
+#define BUTTON_SetDigitalMode()     do { ANSELCbits.ANSELC0 = 0; } while(0)
+
 // get/set RC3 procedures
 #define RC3_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
 #define RC3_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
@@ -196,6 +216,90 @@ void PIN_MANAGER_Initialize (void);
     PIN_MANAGER_IOC();
  */
 void PIN_MANAGER_IOC(void);
+
+
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Interrupt on Change Handler for the IOCCF0 pin functionality
+ * @Example
+    IOCCF0_ISR();
+ */
+void IOCCF0_ISR(void);
+
+/**
+  @Summary
+    Interrupt Handler Setter for IOCCF0 pin interrupt-on-change functionality
+
+  @Description
+    Allows selecting an interrupt handler for IOCCF0 at application runtime
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    InterruptHandler function pointer.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF0_SetInterruptHandler(MyInterruptHandler);
+
+*/
+void IOCCF0_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+  @Summary
+    Dynamic Interrupt Handler for IOCCF0 pin
+
+  @Description
+    This is a dynamic interrupt handler to be used together with the IOCCF0_SetInterruptHandler() method.
+    This handler is called every time the IOCCF0 ISR is executed and allows any function to be registered at runtime.
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF0_SetInterruptHandler(IOCCF0_InterruptHandler);
+
+*/
+extern void (*IOCCF0_InterruptHandler)(void);
+
+/**
+  @Summary
+    Default Interrupt Handler for IOCCF0 pin
+
+  @Description
+    This is a predefined interrupt handler to be used together with the IOCCF0_SetInterruptHandler() method.
+    This handler is called every time the IOCCF0 ISR is executed. 
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
+
+*/
+void IOCCF0_DefaultInterruptHandler(void);
 
 
 
