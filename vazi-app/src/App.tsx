@@ -36,9 +36,6 @@ const Main = () => {
   const [toUARTSend, setToUARTSend] = useState<string>('');
   let lineStream: SerialPort.parsers.Readline;
   const Readline = SerialPort.parsers.Readline;
-  // const sp = new serialport('/dev/tty.SLAB_USBtoUART', {
-  //   baudRate: 115200,
-  // });
 
   useEffect(() => {
     list().then((ports) => {

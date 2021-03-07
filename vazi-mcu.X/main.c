@@ -62,9 +62,28 @@ void setRGB(uint8_t r, uint8_t g, uint8_t b) {
     PWM8_LoadDutyValue(b);
 }
 
+void handleColourChange() {
+    char read[6];
+    char temp[2];
+    int rgb[3];
+    int location=0;
+    for (int i=0; i<6; i++) {
+        read[i] = UART1_Read();
+    }
+    for (int i=0; i<3; i++) {
+        for (int j=0; j<2; j++) {
+            temp[j] = read[location];
+            location++;
+        }
+        rgb[i] = atoi(temp);
+    }
+    setRGB(rgb[0]*2, rgb[1]*2, rgb[2]*2);
+}
+
 void handleButtonPress() {
     printf("bp\n\r");
     __delay_ms(3);
+    
 }
 
 void main(void)
@@ -93,18 +112,18 @@ void main(void)
     printf("Ready\n\r");
     while (1)
     {
-        setRGB(51, 229, 325);
-        __delay_ms(1000);
-        setRGB(225,52,325);
-        __delay_ms(1000);       
-        setRGB(174, 235, 52);
+
+        if (uart1RxCount == 6) {
+            handleColourChange();
+        }
+        
 //        printf("b1");
 //        printf(" Count: %u\n",uart1RxCount);
 //        while (uart1RxCount != 0) {
 //            printf("%c", UART1_Read());
 //            if (uart1RxCount == 0) printf("\n");
 //        }
-        __delay_ms(1000);        
+        __delay_ms(500);        
     }
 }
 /**
