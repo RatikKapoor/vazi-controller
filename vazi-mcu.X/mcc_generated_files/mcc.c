@@ -49,6 +49,7 @@
 
 void SYSTEM_Initialize(void)
 {
+    INTERRUPT_Initialize();
     PMD_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
@@ -56,9 +57,10 @@ void SYSTEM_Initialize(void)
     CLC3_Initialize();
     TMR4_Initialize();
     TMR2_Initialize();
-    PWM8_Initialize();
     PWM5_Initialize();
+    PWM8_Initialize();
     PWM7_Initialize();
+    UART1_Initialize();
     SPI1_Initialize();
 }
 

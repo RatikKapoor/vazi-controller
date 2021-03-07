@@ -25,12 +25,14 @@ interface ValueLabelPair {
   label: string;
 }
 
+let port: SerialPort;
+
 const Main = () => {
   const [avgColour, setAvgColour] = useState<QuadrantColours>();
   const { height, width } = robot.getScreenSize();
   const [serialPorts, setSerialPorts] = useState<PortInfo[]>();
   const [selectedPort, setSelectedPort] = useState<string>();
-  let port: SerialPort;
+  const [toUARTSend, setToUARTSend] = useState<string>('');
   let lineStream: SerialPort.parsers.Readline;
   const Readline = SerialPort.parsers.Readline;
   // const sp = new serialport('/dev/tty.SLAB_USBtoUART', {
@@ -70,17 +72,19 @@ const Main = () => {
       bottomRight: bottomRight,
     });
     console.log(avgColour);
+    robot.moveMouseSmooth(200, 200);
   };
 
   const connectSerialPort = () => {
     if (selectedPort != undefined && selectedPort.length > 1) {
       port = new SerialPort(selectedPort, {
-        baudRate: 9600,
+        baudRate: 115200,
+        lock: false,
       });
       lineStream = port.pipe(new Readline({ delimiter: '\n' }));
       console.log('Setup done');
       lineStream.on('data', (data) => {
-        console.log(data);
+        console.log('GOT DATA: ', data);
       });
     }
   };
@@ -89,6 +93,18 @@ const Main = () => {
     if (port != undefined) {
       port.close();
       lineStream.destroy();
+    }
+  };
+
+  const sendSerialData = () => {
+    console.log('ABOUT TO SEND: ' + toUARTSend, port);
+    if (port != undefined) {
+      port.write(toUARTSend, (err) => {
+        if (err) {
+          console.warn(err);
+        }
+        console.log('Good!');
+      });
     }
   };
 
@@ -104,7 +120,9 @@ const Main = () => {
           onClick={() => {
             calculateQuadrantColours();
           }}
-        ></button>
+        >
+          Colours
+        </button>
         <Select
           options={getPortValueLabel()}
           className="Select"
@@ -115,6 +133,11 @@ const Main = () => {
         />
         <button onClick={() => connectSerialPort()}>Connect</button>
         <button onClick={() => disconnectSerialPort()}>Disconnect</button>
+        <input
+          value={toUARTSend}
+          onChange={(e) => setToUARTSend(e.target.value)}
+        />
+        <button onClick={() => sendSerialData()}></button>
       </div>
     </div>
   );

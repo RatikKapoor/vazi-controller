@@ -47,13 +47,19 @@
                          Main application
  */
 
-void myLEDArray(uint8_t r, uint8_t g, uint8_t b) {
-    SPI1TXB = g;
-    while (!SPI1STATUSbits.TXBE);
-    SPI1TXB = r;
-    while (!SPI1STATUSbits.TXBE);
-    SPI1TXB = b;
-    while (!SPI1STATUSbits.TXBE);
+//void myLEDArray(uint8_t r, uint8_t g, uint8_t b) {
+//    SPI1TXB = g;
+//    while (!SPI1STATUSbits.TXBE);
+//    SPI1TXB = r;
+//    while (!SPI1STATUSbits.TXBE);
+//    SPI1TXB = b;
+//    while (!SPI1STATUSbits.TXBE);
+//}
+
+void setRGB(uint8_t r, uint8_t g, uint8_t b) {
+    PWM6_LoadDutyValue(r);
+    PWM7_LoadDutyValue(g);
+    PWM8_LoadDutyValue(b);
 }
 
 void main(void)
@@ -66,40 +72,31 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
+    INTERRUPT_GlobalInterruptEnable();
+    
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
     
     /** Code for  */
     // Turn off all LEDs
-    for (int i=0; i<256; i++) {
-        myLEDArray(0, 0, 0);
-    }
-//    
-    __delay_ms(1);
-//        PWM6_LoadDutyValue(0);
-//        PWM7_LoadDutyValue(256);
-//        PWM8_LoadDutyValue(0);
-
+//    for (int i=0; i<256; i++) {
+//        myLEDArray(0, 0, 0);
+//    }
+//    __delay_ms(1);
+ 
     while (1)
     {
-        while (1) myLEDArray(255,255,255);
-        // Add your application code
-        PWM6_LoadDutyValue(51);
-        PWM7_LoadDutyValue(229);
-        PWM8_LoadDutyValue(235/2);
-        myLEDArray(255, 255, 255);
+        setRGB(51, 229, 325);
         __delay_ms(1000);
-        PWM6_LoadDutyValue(225);
-        PWM7_LoadDutyValue(52);
-        PWM8_LoadDutyValue(235);
-        myLEDArray(250, 100, 30);
-        __delay_ms(1000);        
-        PWM6_LoadDutyValue(174);
-        PWM7_LoadDutyValue(235);
-        PWM8_LoadDutyValue(52/2);
-        myLEDArray(125, 200, 100);
+        setRGB(225,52,325);
+        __delay_ms(1000);       
+        setRGB(174, 235, 52);
+        printf("b1");
+        printf(" Count: %u\n",uart1RxCount);
+        while (uart1RxCount != 0) {
+            printf("%c", UART1_Read());
+            if (uart1RxCount == 0) printf("\n");
+        }
         __delay_ms(1000);        
     }
 }
