@@ -108,7 +108,7 @@ void main(void)
 //    }
 //    __delay_ms(1);
  
-    IOCCF0_SetInterruptHandler(handleButtonPress);
+    IOCCF2_SetInterruptHandler(handleButtonPress);
     printf("Ready\n\r");
     while (1)
     {
