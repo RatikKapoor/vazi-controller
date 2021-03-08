@@ -134,10 +134,10 @@ const Main = () => {
 
   return (
     <div>
-      <div className="Main">
+      {/* <div className="Main">
         <img width="200px" alt="icon" src={icon} />
-      </div>
-      <h1>Vazi Controller Companion App</h1>
+      </div> */}
+      <h1 className="Name">Vazi Controller Companion App</h1>
       <div className="Main">
         <button
           type="button"
@@ -145,23 +145,34 @@ const Main = () => {
             calculateQuadrantColours();
           }}
         >
-          Colours
+          Get and update colour
         </button>
-        <Select
-          options={getPortValueLabel()}
-          className="Select"
-          onChange={(e) => {
-            setSelectedPort(e?.value);
-            console.log(e);
-          }}
-        />
-        <button onClick={() => connectSerialPort()}>Connect</button>
-        <button onClick={() => disconnectSerialPort()}>Disconnect</button>
-        <input
-          value={toUARTSend}
-          onChange={(e) => setToUARTSend(e.target.value)}
-        />
-        <button onClick={() => sendSerialData(toUARTSend)}></button>
+        <div className="SerialPort">
+          <h2>Port location</h2>
+          <Select
+            options={getPortValueLabel()}
+            className="Select"
+            onChange={(e) => {
+              setSelectedPort(e?.value);
+              console.log(e);
+            }}
+          />
+        </div>
+        <div className="SerialActions">
+          <h2>Serial port status: </h2>
+          <h3>{port ? 'Connected' : 'Disconnected'}</h3>
+          <button onClick={() => connectSerialPort()}>Connect</button>
+          <button onClick={() => disconnectSerialPort()}>Disconnect</button>
+        </div>
+        <div className="SerialSend">
+          <input
+            value={toUARTSend}
+            onChange={(e) => setToUARTSend(e.target.value)}
+          />
+          <button onClick={() => sendSerialData(toUARTSend)}>
+            Send to Serial
+          </button>
+        </div>
       </div>
     </div>
   );

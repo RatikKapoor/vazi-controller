@@ -9,7 +9,7 @@ body {
   background: linear-gradient(
     200.96deg,
     #fedc2a -29.09%,
-    #dd5789 51.77%,
+    #168a9e 51.77%,
     #7a2c9e 129.35%
   );
   font-family: sans-serif;
@@ -52,6 +52,7 @@ a:hover {
 
 .Main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
@@ -59,5 +60,39 @@ a:hover {
 
 .Select {
   width: 200px;
-  color:darkslategrey;
+  color: darkslategrey;
+}
+
+.SerialPort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SerialPort h2 {
+  padding: 10px;
+}
+
+.SerialActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SerialActions h2 {
+  padding: 10px;
+}
+
+.SerialSend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SerialSend h2 {
+  padding: 10px;
+}
+
+.Name {
+  text-align: center;
 }
