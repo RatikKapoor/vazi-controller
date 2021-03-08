@@ -227,8 +227,6 @@
         <property key="memories.programmemory.ranges" value="0-7fff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="/Users/ratik/Documents/School/ENEL400/vazi-controller/vazi-mcu.X/debug/default/vazi-mcu_ptg"/>
         <property key="programmerToGoImageName" value="vazi-mcu_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

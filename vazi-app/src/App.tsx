@@ -37,11 +37,32 @@ const Main = () => {
   let lineStream: SerialPort.parsers.Readline;
   const Readline = SerialPort.parsers.Readline;
 
+  const rgbEncode = (rgb: string | undefined): string => {
+    if (rgb == undefined) return '';
+    const r_temp: number = Math.round(
+      (parseInt('0x' + rgb.substr(0, 2), 16) / 255) * 100
+    );
+    const b_temp: number = Math.round(
+      (parseInt('0x' + rgb.substr(2, 2), 16) / 255) * 100
+    );
+    const g_temp: number = Math.round(
+      (parseInt('0x' + rgb.substr(4, 2), 16) / 255) * 100
+    );
+    console.log('RGB Encode Reading:', r_temp, b_temp, g_temp);
+    return (
+      r_temp.toString().padStart(2, '0') +
+      g_temp.toString().padStart(2, '0') +
+      b_temp.toString().padStart(2, '0')
+    );
+  };
+
   useEffect(() => {
     list().then((ports) => {
       console.log(ports);
       setSerialPorts(ports);
     });
+
+    return () => {};
   }, []);
 
   const getPortValueLabel = (): ValueLabelPair[] => {
@@ -70,7 +91,7 @@ const Main = () => {
       bottomRight: bottomRight,
     });
     console.log(avgColour);
-    robot.moveMouseSmooth(200, 200);
+    sendSerialData(rgbEncode(avgColour?.topLeft));
   };
 
   const handleSerialInput = (data: string) => {
@@ -99,10 +120,10 @@ const Main = () => {
     }
   };
 
-  const sendSerialData = () => {
-    console.log('ABOUT TO SEND: ' + toUARTSend, port);
+  const sendSerialData = (data: string) => {
+    console.log('ABOUT TO SEND: ' + data, port);
     if (port != undefined) {
-      port.write(toUARTSend, (err) => {
+      port.write(data, (err) => {
         if (err) {
           console.warn(err);
         }
@@ -140,7 +161,7 @@ const Main = () => {
           value={toUARTSend}
           onChange={(e) => setToUARTSend(e.target.value)}
         />
-        <button onClick={() => sendSerialData()}></button>
+        <button onClick={() => sendSerialData(toUARTSend)}></button>
       </div>
     </div>
   );
