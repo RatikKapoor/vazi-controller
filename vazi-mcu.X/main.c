@@ -41,50 +41,39 @@
     SOFTWARE.
 */
 
+#include <pic18lf45k42.h>
+
 #include "mcc_generated_files/mcc.h"
+#include "rgbmanager.h"
+#include "buttonmanager.h"
 
 /*
-                         Main application
+ * Main application
+ * 
+ * 
+ * RGB UART Receive Schema:
+ * 
+ * 25 bytes
+ * Byte     0       :   Clear LEDs
+ * Bytes    1-6     :   RRGGBB (LED #1)
+ * Bytes    7-12    :   RRGGBB (LED #2)
+ * Bytes    13-18   :   RRGGBB (LED #3)
+ * Bytes    19-24   :   RRGGBB (LED #4)
+ * 
+ * 
+ * Button Press UART Send Schema:
+ * "{action (button press (bp))}-{button name (up)}"
+ * 
+ * Up Button Press          -   "bp-up"
+ * Down Button Press        -   "bp-down"
+ * Left Button Press        -   "bp-left"
+ * Right Button Press       -   "bp-right"
+ * Select Button Press      -   "bp-select"
+ * Start Button Press       -   "bp-start"
+ * A Button Press           -   "bp-a"
+ * B Button Press           -   "bp-b"
+ * 
  */
-
-//void myLEDArray(uint8_t r, uint8_t g, uint8_t b) {
-//    SPI1TXB = g;
-//    while (!SPI1STATUSbits.TXBE);
-//    SPI1TXB = r;
-//    while (!SPI1STATUSbits.TXBE);
-//    SPI1TXB = b;
-//    while (!SPI1STATUSbits.TXBE);
-//}
-
-void setRGB(uint8_t r, uint8_t g, uint8_t b) {
-    PWM6_LoadDutyValue(r);
-    PWM7_LoadDutyValue(g);
-    PWM8_LoadDutyValue(b);
-}
-
-void handleColourChange() {
-    char read[6];
-    char temp[2];
-    int rgb[3];
-    int location=0;
-    for (int i=0; i<6; i++) {
-        read[i] = UART1_Read();
-    }
-    for (int i=0; i<3; i++) {
-        for (int j=0; j<2; j++) {
-            temp[j] = read[location];
-            location++;
-        }
-        rgb[i] = atoi(temp);
-    }
-    setRGB(rgb[0]*2, rgb[1]*2, rgb[2]*2);
-}
-
-void handleButtonPress() {
-    printf("bp\n\r");
-    __delay_ms(3);
-    
-}
 
 void main(void)
 {
@@ -101,29 +90,24 @@ void main(void)
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
     
-    /** Code for  */
+    /** Code for aRGBs */
     // Turn off all LEDs
-//    for (int i=0; i<256; i++) {
-//        myLEDArray(0, 0, 0);
-//    }
-//    __delay_ms(1);
+    for (int i=0; i<256; i++) {
+        setSingleRGB(0, 0, 0);
+    }
+    __delay_ms(1);
  
+    /** Set button interrupt handlers */
+    
     IOCCF2_SetInterruptHandler(handleButtonPress);
+    
+    
     printf("Ready\n\r");
     while (1)
     {
-
-        if (uart1RxCount == 6) {
+        if (uart1RxCount == 25) {
             handleColourChange();
-        }
-        
-//        printf("b1");
-//        printf(" Count: %u\n",uart1RxCount);
-//        while (uart1RxCount != 0) {
-//            printf("%c", UART1_Read());
-//            if (uart1RxCount == 0) printf("\n");
-//        }
-        __delay_ms(500);        
+        }      
     }
 }
 /**
