@@ -98,11 +98,15 @@ void main(void)
     __delay_ms(1);
  
     /** Set button interrupt handlers */
-    
-    IOCCF2_SetInterruptHandler(handleButtonPress);
-    
-    
-    printf("Ready\n\r");
+    IOCAF6_SetInterruptHandler(handleButtonUpPress);        // Up
+    IOCCF0_SetInterruptHandler(handleButtonRightPress);     // Right
+    IOCCF1_SetInterruptHandler(handleButtonLeftPress);      // Left
+    IOCCF2_SetInterruptHandler(handleButtonDownPress);      // Down
+    IOCBF5_SetInterruptHandler(handleButtonSelectPress);    // Select
+    IOCBF4_SetInterruptHandler(handleButtonStartPress);     // Start
+    IOCBF3_SetInterruptHandler(handleButtonAPress);         // A
+    IOCBF2_SetInterruptHandler(handleButtonBPress);         // B
+
     while (1)
     {
         if (uart1RxCount == 25) {
