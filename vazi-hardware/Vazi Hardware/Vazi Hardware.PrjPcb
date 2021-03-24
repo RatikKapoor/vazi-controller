@@ -72,7 +72,11 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=DUNWJAJX
+DocumentUniqueId=HMNRXJBM
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Vazi Hardware\Design Rule Check - ControllerDiagrams.html
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
