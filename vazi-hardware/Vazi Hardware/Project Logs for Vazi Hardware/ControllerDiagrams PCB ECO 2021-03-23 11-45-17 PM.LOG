@@ -1,0 +1,18 @@
+Added Component: Designator=P1(HDRV5W64P0X254_1X5_1270X248X838P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/HTSW-105-07-L-S.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.38mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "SAMTEC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "HTSW-105-07-L-S"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "200-HTSW10507LS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Samtec/HTSW-105-07-L-S?qs=0lQeLiL1qybu1UQ%2Fa8lryA%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetP1_MCLR Pin=U1-18
+Added Net: Name=NetP1_MCLR
+Added Pin To Net: NetName=NetP1_PGC Pin=U1-16
+Added Net: Name=NetP1_PGC
+Added Pin To Net: NetName=NetP1_PGD Pin=U1-17
+Added Net: Name=NetP1_PGD
+Added Member To Class: ClassName=ControllerDiagrams Member=Component J1
+Added Member To Class: ClassName=ControllerDiagrams Member=Component P1 Programmer
+Added Room: Name=ControllerDiagrams

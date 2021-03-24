@@ -1,0 +1,13 @@
+Added Pin To Net: NetName=+5 Pin=P1-2
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_1 Pin=U1-18
+Added Net: Name=NetP1_1
+Added Pin To Net: NetName=NetP1_4 Pin=P1-4
+Added Pin To Net: NetName=NetP1_4 Pin=U1-17
+Added Net: Name=NetP1_4
+Added Pin To Net: NetName=NetP1_5 Pin=P1-5
+Added Pin To Net: NetName=NetP1_5 Pin=U1-16
+Added Net: Name=NetP1_5
+Added Member To Class: ClassName=ControllerDiagrams Member=Component P1 Programmer
+Added Room: Name=ControllerDiagrams
