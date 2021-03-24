@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Ratik\Desktop\vazi-controller\vazi-hardware\Vazi Hardware\ControllerDiagrams.PcbDoc
 Date     : 2021-03-24
-Time     : 10:40:29 AM
+Time     : 11:06:17 AM
 
 Processing Rule : Clearance Constraint (Gap=0.127mm) (All),(All)
 Rule Violations :0
@@ -14,15 +14,12 @@ Processing Rule : Un-Routed Net Constraint ( (All) )
    Violation between Un-Routed Net Constraint: Net +5 Between Pad LED2-1(35.888mm,78.992mm) on Bottom Layer And Pad C10-2(37.846mm,77.597mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad C10-2(37.846mm,77.597mm) on Bottom Layer And Pad P2-1(48.768mm,82.423mm) on Multi-Layer 
    Violation between Un-Routed Net Constraint: Net GND Between Pad C1-1(66.548mm,54.164mm) on Top Layer And Pad C2-1(69.469mm,54.229mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-29(57.95mm,54.707mm) on Bottom Layer And Pad C1-1(66.548mm,54.164mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad C11-2(109.347mm,39.367mm) on Bottom Layer And Pad C19-2(109.347mm,40.767mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad C12-2(37.592mm,39.878mm) on Bottom Layer And Pad C18-2(37.592mm,39.878mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad LED4-1(35.724mm,41.274mm) on Bottom Layer And Pad C12-2(37.592mm,39.878mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad C12-2(37.592mm,39.878mm) on Bottom Layer And Pad U1-28(51.958mm,49.276mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad C15-2(55.372mm,69.407mm) on Bottom Layer And Pad C14-2(57.277mm,69.469mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad C14-2(57.277mm,69.469mm) on Bottom Layer And Pad IC1-20(70.866mm,69.114mm) on Top Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad C14-2(57.277mm,69.469mm) on Bottom Layer And Pad USB-UART-7(57.682mm,71.693mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad U1-28(51.958mm,49.276mm) on Bottom Layer And Pad C15-2(55.372mm,69.407mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetC16_1 Between Pad USB-UART-6(58.182mm,71.693mm) on Bottom Layer And Pad C16-1(59.182mm,69.472mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad C12-2(37.592mm,39.878mm) on Bottom Layer And Pad U1-7(56.35mm,43.307mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad U1-28(57.15mm,54.707mm) on Bottom Layer And Pad C15-2(59.182mm,69.723mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad C9-2(110.236mm,76.2mm) on Bottom Layer And Pad C17-2(110.236mm,76.2mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad C19-2(109.347mm,40.767mm) on Top Layer And Pad LED8-1(111.469mm,42.163mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR8-2(87.122mm,44.832mm) on Top Layer And Pad C19-2(109.347mm,40.767mm) on Top Layer 
@@ -30,10 +27,7 @@ Processing Rule : Un-Routed Net Constraint ( (All) )
    Violation between Un-Routed Net Constraint: Net +5 Between Pad C9-2(110.236mm,76.2mm) on Bottom Layer And Pad LED6-1(112.231mm,77.596mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad USBin-A9(77.954mm,76.367mm) on Bottom Layer And Pad C9-2(110.236mm,76.2mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad IC1-20(70.866mm,69.114mm) on Top Layer [Unplated] And Pad USBin-A4(74.954mm,76.367mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_16 Between Pad U1-32(51.958mm,52.476mm) on Bottom Layer And Pad J3-1(73.279mm,64.733mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_15 Between Pad U1-36(55.258mm,54.976mm) on Bottom Layer And Pad J4-1(75.438mm,64.77mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_12 Between Pad U1-15(59.258mm,43.576mm) on Bottom Layer And Pad J7-1(81.788mm,64.733mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_11 Between Pad U1-14(60.058mm,43.576mm) on Bottom Layer And Pad J8-1(83.82mm,64.733mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Track (60.267mm,70.21mm)(60.473mm,70.21mm) on Bottom Layer And Pad IC1-20(70.866mm,69.114mm) on Top Layer [Unplated] 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad LED6-1(112.231mm,77.596mm) on Top Layer And Pad LED1-1(117.131mm,77.596mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net NetLED1_2 Between Pad LED2-4(30.988mm,78.992mm) on Bottom Layer And Pad LED1-2(117.131mm,74.296mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net NetLED1_4 Between Pad Rin-2(67.691mm,46.863mm) on Bottom Layer And Pad LED1-4(112.231mm,77.596mm) on Bottom Layer 
@@ -46,35 +40,25 @@ Processing Rule : Un-Routed Net Constraint ( (All) )
    Violation between Un-Routed Net Constraint: Net NetLED5_2 Between Pad LED5-2(30.988mm,75.692mm) on Top Layer And Pad LED6-4(117.131mm,77.596mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net NetLED6_2 Between Pad LED7-4(35.851mm,41.528mm) on Top Layer And Pad LED6-2(112.231mm,74.296mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net NetLED7_2 Between Pad LED7-2(30.951mm,38.228mm) on Top Layer And Pad LED8-4(116.369mm,42.163mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net NetP1_1 Between Pad U1-18(56.858mm,43.576mm) on Bottom Layer And Pad P1-1(65.786mm,82.423mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetP1_1 Between Pad U1-18(51.45mm,49.807mm) on Bottom Layer And Pad P1-1(65.786mm,82.423mm) on Multi-Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad P2-1(48.768mm,82.423mm) on Multi-Layer And Pad P1-2(63.246mm,82.423mm) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad USB-UART-9(56.707mm,73.168mm) on Bottom Layer And Pad P1-2(63.246mm,82.423mm) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetP1_4 Between Pad U1-17(57.658mm,43.576mm) on Bottom Layer And Pad P1-4(58.166mm,82.423mm) on Multi-Layer 
-   Violation between Un-Routed Net Constraint: Net NetP1_5 Between Pad P1-5(55.626mm,82.423mm) on Multi-Layer And Pad U1-16(58.458mm,43.576mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetP2_2 Between Pad P2-2(46.228mm,82.423mm) on Multi-Layer And Pad USB-UART-26(61.657mm,73.668mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetP2_3 Between Pad P2-3(43.688mm,82.423mm) on Multi-Layer And Pad USB-UART-25(61.657mm,74.168mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Track (59.412mm,71.814mm)(60.012mm,72.414mm) on Bottom Layer And Pad P1-2(63.246mm,82.423mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetP1_4 Between Pad U1-17(51.45mm,49.007mm) on Bottom Layer And Pad P1-4(58.166mm,82.423mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net NetP1_5 Between Pad U1-16(51.45mm,48.207mm) on Bottom Layer And Pad P1-5(55.626mm,82.423mm) on Multi-Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR1-2(66.675mm,44.831mm) on Top Layer And Pad PR2-2(69.723mm,44.831mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad U1-7(63.358mm,48.476mm) on Bottom Layer And Pad PR1-2(66.675mm,44.831mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad U1-7(56.35mm,43.307mm) on Bottom Layer And Pad PR1-2(66.675mm,44.831mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR2-2(69.723mm,44.831mm) on Top Layer And Pad PR3-2(72.644mm,44.831mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR3-2(72.644mm,44.831mm) on Top Layer And Pad PR4-2(75.311mm,44.831mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR4-2(75.311mm,44.831mm) on Top Layer And Pad PR5-2(78.232mm,44.831mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR5-2(78.232mm,44.831mm) on Top Layer And Pad PR6-2(81.153mm,44.831mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR6-2(81.153mm,44.831mm) on Top Layer And Pad PR7-2(84.074mm,44.831mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad PR7-2(84.074mm,44.831mm) on Top Layer And Pad PR8-2(87.122mm,44.832mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net NetRin_1 Between Pad U1-9(63.358mm,46.876mm) on Bottom Layer And Pad Rin-1(66.041mm,46.863mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetP2_2 Between Pad USB-UART-26(61.657mm,73.668mm) on Bottom Layer And Pad U1-1(63.358mm,53.276mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_13 Between Pad U1-10(63.358mm,46.076mm) on Bottom Layer And Via (79.756mm,66.167mm) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_14 Between Pad U1-11(63.358mm,45.276mm) on Bottom Layer And Via (77.47mm,66.167mm) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad U1-28(51.958mm,49.276mm) on Bottom Layer And Pad U1-7(63.358mm,48.476mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_18 Between Pad U1-31(51.958mm,51.676mm) on Bottom Layer And Track (68.834mm,64.733mm)(68.961mm,64.86mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetIC1_17 Between Pad U1-35(54.458mm,54.976mm) on Bottom Layer And Via (71.12mm,66.167mm) from Top Layer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net NetP2_3 Between Pad USB-UART-25(61.657mm,74.168mm) on Bottom Layer And Pad U1-44(61.658mm,54.976mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net NetRin_1 Between Pad U1-9(54.75mm,43.307mm) on Bottom Layer And Pad Rin-1(66.041mm,46.863mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net NetP2_2 Between Track (55.42mm,79.756mm)(58.412mm,76.764mm) on Bottom Layer And Pad U1-1(61.15mm,43.307mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net +5 Between Pad U1-7(56.35mm,43.307mm) on Bottom Layer And Pad U1-28(57.15mm,54.707mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net NetP2_3 Between Track (55.216mm,79.46mm)(57.912mm,76.764mm) on Bottom Layer And Pad U1-44(62.85mm,45.007mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net +5 Between Pad USBin-A4(74.954mm,76.367mm) on Bottom Layer And Pad USBin-A9(77.954mm,76.367mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net USB_P Between Pad USB-UART-4(59.182mm,71.693mm) on Bottom Layer And Pad USBin-A6(75.954mm,76.367mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net USB_N Between Pad USB-UART-5(58.682mm,71.693mm) on Bottom Layer And Pad USBin-A7(76.954mm,76.367mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad USB-UART-8(56.707mm,72.668mm) on Bottom Layer And Pad USB-UART-7(57.682mm,71.693mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net +5 Between Pad USB-UART-8(56.707mm,72.668mm) on Bottom Layer And Pad USB-UART-9(56.707mm,73.168mm) on Bottom Layer 
-Rule Violations :64
+Rule Violations :48
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
@@ -116,6 +100,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm)
 Rule Violations :0
 
 
-Violations Detected : 64
+Violations Detected : 48
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01
