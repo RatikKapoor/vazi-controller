@@ -1,0 +1,98 @@
+Change Component Footprint: Designator=LED1 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Footprint: Designator=LED2 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Footprint: Designator=LED3 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Footprint: Designator=LED4 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Footprint: Designator=LED5 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Footprint: Designator=LED6 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Footprint: Designator=LED7 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Footprint: Designator=LED8 Old Footprint=ADA-RGB-1655_V New Footprint=ILPHK501RGBWSK68120501
+Change Component Comment : Designator=LED1 Old Comment=1655 New Comment=SK6812
+Change Component Comment : Designator=LED2 Old Comment=1655 New Comment=SK6812
+Change Component Comment : Designator=LED3 Old Comment=1655 New Comment=SK6812
+Change Component Comment : Designator=LED4 Old Comment=1655 New Comment=SK6812
+Change Component Comment : Designator=LED5 Old Comment=1655 New Comment=SK6812
+Change Component Comment : Designator=LED6 Old Comment=1655 New Comment=SK6812
+Change Component Comment : Designator=LED7 Old Comment=1655 New Comment=SK6812
+Change Component Comment : Designator=LED8 Old Comment=1655 New Comment=SK6812
+Change Managed Component Library Link : Designator=LED1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change Managed Component Library Link : Designator=LED2 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change Managed Component Library Link : Designator=LED3 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change Managed Component Library Link : Designator=LED4 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change Managed Component Library Link : Designator=LED5 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change Managed Component Library Link : Designator=LED6 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change Managed Component Library Link : Designator=LED7 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change Managed Component Library Link : Designator=LED8 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=11407CA7-DCD9-470B-A66F-87884927D101 New ItemGUID= Old RevisionGUID=07ED9FBA-C69F-4D25-9087-AC751B21DF2E New RevisionGUID=
+Change component parameters: Designator = "LED1" ("LED1"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\QTFOVVDP" ("\QTFOVVDP")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED2" ("LED2"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\STTUYATC" ("\STTUYATC")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED3" ("LED3"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\KBQJUFWK" ("\KBQJUFWK")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED4" ("LED4"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\GXZORMYN" ("\GXZORMYN")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED5" ("LED5"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\KFFIOSKP" ("\KFFIOSKP")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED6" ("LED6"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\CLLKGJPT" ("\CLLKGJPT")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED7" ("LED7"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\NRDZITVN" ("\NRDZITVN")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED8" ("LED8"); Footprint = "ADA-RGB-1655_V"; UniqueID = "\DIJCFFBA" ("\DIJCFFBA")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/1921700"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.7mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Intelligent LED Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ILPH-K501-RGBW-SK6812-05-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=ControllerDiagrams Member=Component P1 Programmer
+Added Room: Name=ControllerDiagrams
