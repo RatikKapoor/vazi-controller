@@ -9,7 +9,6 @@
 #include <xc.h>
 
 #include "rgbmanager.h"
-#include "mcc_generated_files/uart1.h"
 
 void setSingleRGB(uint8_t r, uint8_t g, uint8_t b) {
     SPI1TXB = g;
@@ -36,4 +35,11 @@ void handleColourChange() {
         rgb[i] = atoi(temp);
     }
     setSingleRGB(rgb[0]*2, rgb[1]*2, rgb[2]*2);
+}
+
+void clearAllRGB() {
+    for (int i=0; i<256; i++) {
+        setSingleRGB(0, 0, 0);
+    }
+    __delay_ms(1);
 }

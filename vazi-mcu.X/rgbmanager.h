@@ -33,6 +33,8 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.
 #include <stdint.h>
+#include "mcc_generated_files/uart1.h"
+#include "mcc_generated_files/device_config.h"
 
 // TODO Insert appropriate #include <>
 
@@ -67,6 +69,8 @@
 void setSingleRGB(uint8_t r, uint8_t g, uint8_t b);
 
 void handleColourChange();
+
+void clearAllRGB();
 
 #ifdef	__cplusplus
 extern "C" {

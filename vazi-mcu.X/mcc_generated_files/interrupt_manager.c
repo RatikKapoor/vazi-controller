@@ -57,6 +57,7 @@ void  INTERRUPT_Initialize (void)
 
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
+    DOZEN = 0;
     // interrupt handler
     if(PIE3bits.U1RXIE == 1 && PIR3bits.U1RXIF == 1)
     {

@@ -33,45 +33,6 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
-// TODO Insert appropriate #include <>
-
-// TODO Insert C++ class definitions if appropriate
-
-// TODO Insert declarations
-
-// Comment a function and leverage automatic documentation with slash star star
-/**
-    <p><b>Function prototype:</b></p>
-  
-    <p><b>Summary:</b></p>
-
-    <p><b>Description:</b></p>
-
-    <p><b>Precondition:</b></p>
-
-    <p><b>Parameters:</b></p>
-
-    <p><b>Returns:</b></p>
-
-    <p><b>Example:</b></p>
-    <code>
- 
-    </code>
-
-    <p><b>Remarks:</b></p>
- */
-// TODO Insert declarations or function prototypes (right here) to leverage 
-// live documentation
-
-void handleButtonUpPress();
-void handleButtonDownPress();
-void handleButtonLeftPress();
-void handleButtonRightPress();
-void handleButtonSelectPress();
-void handleButtonStartPress();
-void handleButtonAPress();
-void handleButtonBPress();
-
 #ifdef	__cplusplus
 extern "C" {
 #endif /* __cplusplus */
@@ -85,3 +46,11 @@ extern "C" {
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 
+void handleButtonUp();
+void handleButtonDown();
+void handleButtonLeft();
+void handleButtonRight();
+void handleButtonSelect();
+void handleButtonStart();
+void handleButtonA();
+void handleButtonB();

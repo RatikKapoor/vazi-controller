@@ -62,16 +62,17 @@
  * 
  * 
  * Button Press UART Send Schema:
- * "{action (button press (bp))}-{button name (up)}"
+ * Newline delimited
+ * "{action (button press (bp))}-{button name (up)}\n"
  * 
- * Up Button Press          -   "bp-up"
- * Down Button Press        -   "bp-down"
- * Left Button Press        -   "bp-left"
- * Right Button Press       -   "bp-right"
- * Select Button Press      -   "bp-select"
- * Start Button Press       -   "bp-start"
- * A Button Press           -   "bp-a"
- * B Button Press           -   "bp-b"
+ * Up Button Press          -   "bp-up\n"
+ * Down Button Press        -   "bp-down\n"
+ * Left Button Press        -   "bp-left\n"
+ * Right Button Press       -   "bp-right\n"
+ * Select Button Press      -   "bp-select\n"
+ * Start Button Press       -   "bp-start\n"
+ * A Button Press           -   "bp-a\n"
+ * B Button Press           -   "bp-b\n"
  * 
  */
 
@@ -80,40 +81,38 @@ void main(void)
     // Initialize the device
     SYSTEM_Initialize();
 
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global Interrupts
-    // Use the following macros to:
-
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
-    
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-    
-    /** Code for aRGBs */
-    // Turn off all LEDs
-    for (int i=0; i<256; i++) {
-        setSingleRGB(0, 0, 0);
-    }
-    __delay_ms(1);
+        
+    // Turn off all LEDs 
+    clearAllRGB();
  
-    /** Set button interrupt handlers */
-    IOCAF6_SetInterruptHandler(handleButtonUpPress);        // Up
-    IOCCF0_SetInterruptHandler(handleButtonRightPress);     // Right
-    IOCCF1_SetInterruptHandler(handleButtonLeftPress);      // Left
-    IOCCF2_SetInterruptHandler(handleButtonDownPress);      // Down
-    IOCBF5_SetInterruptHandler(handleButtonSelectPress);    // Select
-    IOCBF4_SetInterruptHandler(handleButtonStartPress);     // Start
-    IOCBF3_SetInterruptHandler(handleButtonAPress);         // A
-    IOCBF2_SetInterruptHandler(handleButtonBPress);         // B
+    // Set button interrupt handlers
+    IOCAF6_SetInterruptHandler(handleButtonUp);        // Up
+    IOCCF0_SetInterruptHandler(handleButtonRight);     // Right
+    IOCCF1_SetInterruptHandler(handleButtonLeft);      // Left
+    IOCCF2_SetInterruptHandler(handleButtonDown);      // Down
+    IOCBF5_SetInterruptHandler(handleButtonSelect);    // Select
+    IOCBF4_SetInterruptHandler(handleButtonStart);     // Start
+    IOCBF3_SetInterruptHandler(handleButtonA);         // A
+    IOCBF2_SetInterruptHandler(handleButtonB);         // B
+    
+    // Set power save mode operation state
+    DOZE0 = 1;
+    DOZE1 = 1;
+    DOZE2 = 1;
 
     while (1)
     {
-        if (uart1RxCount == 25) {
-            handleColourChange();
-        }      
+//        if (uart1RxCount == 25) {
+//            handleColourChange();
+//        }
+        DOZEN = 1;
+//        printf("Yeet");
+//        __delay_ms(1000);
     }
 }
+
 /**
  End of File
 */
