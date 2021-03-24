@@ -1,0 +1,80 @@
+Removed Pin From Net: NetName=GND Pin=Schmitt-1
+Removed Pin From Net: NetName=NetC8_2 Pin=Schmitt-2
+Removed Pin From Net: NetName=NetC7_2 Pin=Schmitt-3
+Removed Pin From Net: NetName=NetC6_2 Pin=Schmitt-4
+Removed Pin From Net: NetName=NetC5_2 Pin=Schmitt-5
+Removed Pin From Net: NetName=NetC4_2 Pin=Schmitt-6
+Removed Pin From Net: NetName=NetC3_2 Pin=Schmitt-7
+Removed Pin From Net: NetName=NetC2_2 Pin=Schmitt-8
+Removed Pin From Net: NetName=NetC1_2 Pin=Schmitt-9
+Removed Pin From Net: NetName=GND Pin=Schmitt-10
+Removed Pin From Net: NetName=GND Pin=Schmitt-11
+Removed Pin From Net: NetName=+5 Pin=Schmitt-20
+Removed Member From Class: ClassName=ControllerDiagrams Member=Schmitt
+Added Component: Designator=IC1(SOIC127P1032X265-20N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "74HCT7541D,118"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/74hct7541d118/nexperia"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://assets.nexperia.com/documents/data-sheet/74HC_HCT7541.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "2.65mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Nexperia"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "74HCT7541D,118"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "771-74HCT7541D-T"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Nexperia/74HCT7541D118?qs=me8TqzrmIYUuRbgAkVALbQ%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=IC1-1
+Added Pin To Net: NetName=GND Pin=IC1-10
+Added Pin To Net: NetName=NetC8_2 Pin=IC1-11
+Added Pin To Net: NetName=NetC7_2 Pin=IC1-12
+Added Pin To Net: NetName=NetC6_2 Pin=IC1-13
+Added Pin To Net: NetName=NetC5_2 Pin=IC1-14
+Added Pin To Net: NetName=NetC4_2 Pin=IC1-15
+Added Pin To Net: NetName=NetC3_2 Pin=IC1-16
+Added Pin To Net: NetName=NetC2_2 Pin=IC1-17
+Added Pin To Net: NetName=NetC1_2 Pin=IC1-18
+Added Pin To Net: NetName=GND Pin=IC1-19
+Added Pin To Net: NetName=+5 Pin=IC1-20
+Added Pin To Net: NetName=NetIC1_2 Pin=IC1-2
+Added Pin To Net: NetName=NetIC1_2 Pin=J1-1
+Added Pin To Net: NetName=NetIC1_2 Pin=U1-31
+Added Net: Name=NetIC1_2
+Added Pin To Net: NetName=NetIC1_3 Pin=IC1-3
+Added Pin To Net: NetName=NetIC1_3 Pin=J2-1
+Added Pin To Net: NetName=NetIC1_3 Pin=U1-35
+Added Net: Name=NetIC1_3
+Added Pin To Net: NetName=NetIC1_4 Pin=IC1-4
+Added Pin To Net: NetName=NetIC1_4 Pin=J3-1
+Added Pin To Net: NetName=NetIC1_4 Pin=U1-32
+Added Net: Name=NetIC1_4
+Added Pin To Net: NetName=NetIC1_5 Pin=IC1-5
+Added Pin To Net: NetName=NetIC1_5 Pin=J4-1
+Added Pin To Net: NetName=NetIC1_5 Pin=U1-36
+Added Net: Name=NetIC1_5
+Added Pin To Net: NetName=NetIC1_6 Pin=IC1-6
+Added Pin To Net: NetName=NetIC1_6 Pin=J5-1
+Added Pin To Net: NetName=NetIC1_6 Pin=U1-11
+Added Net: Name=NetIC1_6
+Added Pin To Net: NetName=NetIC1_7 Pin=IC1-7
+Added Pin To Net: NetName=NetIC1_7 Pin=J6-1
+Added Pin To Net: NetName=NetIC1_7 Pin=U1-10
+Added Net: Name=NetIC1_7
+Added Pin To Net: NetName=NetIC1_8 Pin=IC1-8
+Added Pin To Net: NetName=NetIC1_8 Pin=J7-1
+Added Pin To Net: NetName=NetIC1_8 Pin=U1-15
+Added Net: Name=NetIC1_8
+Added Pin To Net: NetName=NetIC1_9 Pin=IC1-9
+Added Pin To Net: NetName=NetIC1_9 Pin=J8-1
+Added Pin To Net: NetName=NetIC1_9 Pin=U1-14
+Added Net: Name=NetIC1_9
+Added Pin To Net: NetName=NetP1_1 | MCLR Pin=U1-18
+Added Net: Name=NetP1_1 | MCLR
+Added Pin To Net: NetName=NetP1_4 | PGD Pin=U1-17
+Added Net: Name=NetP1_4 | PGD
+Added Pin To Net: NetName=NetP1_5 | PGC Pin=U1-16
+Added Net: Name=NetP1_5 | PGC
+Added Pin To Net: NetName=NetP2_2 | RX Pin=U1-1
+Added Pin To Net: NetName=NetP2_2 | RX Pin=USB-UART-26
+Added Net: Name=NetP2_2 | RX
+Added Pin To Net: NetName=NetP2_3 | TX Pin=U1-44
+Added Pin To Net: NetName=NetP2_3 | TX Pin=USB-UART-25
+Added Net: Name=NetP2_3 | TX
+Added Member To Class: ClassName=ControllerDiagrams Member=Component IC1 74HCT7541D,118
+Added Room: Name=ControllerDiagrams

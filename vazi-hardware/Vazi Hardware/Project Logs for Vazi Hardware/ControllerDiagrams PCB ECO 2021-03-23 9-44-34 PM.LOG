@@ -1,0 +1,4 @@
+Change Net Name : Old Net Name=NetUSB-UART_4 New Net Name=USB_P
+Change Net Name : Old Net Name=NetUSB-UART_5 New Net Name=USB_N
+Added Differential Pair: Name=USB
+Added Room: Name=ControllerDiagrams
