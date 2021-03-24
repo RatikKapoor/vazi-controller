@@ -1,0 +1,10 @@
+Change Component Designator: OldDesignator=USB-C NewDesignator=USBin
+Added Pin To Net: NetName=GND Pin=SWA-3
+Added Pin To Net: NetName=GND Pin=SWB-3
+Added Pin To Net: NetName=GND Pin=SWDOWN-3
+Added Pin To Net: NetName=GND Pin=SWLEFT-3
+Added Pin To Net: NetName=GND Pin=SWRIGHT-3
+Added Pin To Net: NetName=GND Pin=SWSEL-3
+Added Pin To Net: NetName=GND Pin=SWSTRT-3
+Added Pin To Net: NetName=GND Pin=SWUP-3
+Added Room: Name=ControllerDiagrams

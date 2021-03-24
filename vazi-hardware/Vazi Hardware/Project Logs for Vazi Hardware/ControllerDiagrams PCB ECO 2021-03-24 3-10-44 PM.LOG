@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=NetLED2_2 Pin=LED2-2
+Removed Pin From Net: NetName=NetLED1_2 Pin=LED2-4
+Removed Pin From Net: NetName=NetLED3_2 Pin=LED3-2
+Removed Pin From Net: NetName=NetLED2_2 Pin=LED3-4
+Removed Pin From Net: NetName=NetLED4_2 Pin=LED4-2
+Removed Pin From Net: NetName=NetLED3_2 Pin=LED4-4
+Removed Pin From Net: NetName=NetLED5_2 Pin=LED5-2
+Removed Pin From Net: NetName=NetLED4_2 Pin=LED5-4
+Removed Pin From Net: NetName=NetLED6_2 Pin=LED6-2
+Removed Pin From Net: NetName=NetLED5_2 Pin=LED6-4
+Removed Pin From Net: NetName=NetLED7_2 Pin=LED7-2
+Removed Pin From Net: NetName=NetLED6_2 Pin=LED7-4
+Removed Pin From Net: NetName=NetLED7_2 Pin=LED8-4
+Added Pin To Net: NetName=NetLED1_2 Pin=LED2-2
+Added Pin To Net: NetName=NetLED2_2 Pin=LED2-4
+Added Pin To Net: NetName=NetLED2_2 Pin=LED3-2
+Added Pin To Net: NetName=NetLED3_2 Pin=LED3-4
+Added Pin To Net: NetName=NetLED3_2 Pin=LED4-2
+Added Pin To Net: NetName=NetLED4_2 Pin=LED4-4
+Added Pin To Net: NetName=NetLED4_2 Pin=LED5-2
+Added Pin To Net: NetName=NetLED5_2 Pin=LED5-4
+Added Pin To Net: NetName=NetLED5_2 Pin=LED6-2
+Added Pin To Net: NetName=NetLED6_2 Pin=LED6-4
+Added Pin To Net: NetName=NetLED6_2 Pin=LED7-2
+Added Pin To Net: NetName=NetLED7_2 Pin=LED7-4
+Added Pin To Net: NetName=NetLED7_2 Pin=LED8-2
+Added Room: Name=ControllerDiagrams
