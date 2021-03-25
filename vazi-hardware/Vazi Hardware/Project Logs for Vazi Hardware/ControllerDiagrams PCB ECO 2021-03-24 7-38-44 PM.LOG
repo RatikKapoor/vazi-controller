@@ -1,0 +1,9 @@
+Added Pin To Net: NetName=NetPR5_1 Pin=SWA-1
+Added Pin To Net: NetName=NetPR6_1 Pin=SWB-1
+Added Pin To Net: NetName=NetPR4_1 Pin=SWDOWN-1
+Added Pin To Net: NetName=NetPR2_1 Pin=SWLEFT-1
+Added Pin To Net: NetName=NetPR3_1 Pin=SWRIGHT-1
+Added Pin To Net: NetName=NetPR7_1 Pin=SWSEL-1
+Added Pin To Net: NetName=NetPR8_1 Pin=SWSTRT-1
+Added Pin To Net: NetName=NetPR1_1 Pin=SWUP-1
+Added Room: Name=ControllerDiagrams

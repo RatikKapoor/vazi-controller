@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Vazi Hardware.PrjPcb]
+   Generated File[ControllerDiagrams-RoundHoles.TXT]
+   Generated File[ControllerDiagrams-SlotHoles.TXT]
+   Generated File[ControllerDiagrams.LDP]
+   Generated File[ControllerDiagrams.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 7:53:50 PM On 2021-03-24
