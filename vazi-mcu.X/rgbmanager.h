@@ -66,6 +66,8 @@
 // TODO Insert declarations or function prototypes (right here) to leverage 
 // live documentation
 
+void handleUARTInput();
+
 void setSingleRGB(uint8_t r, uint8_t g, uint8_t b);
 
 void handleColourChange();

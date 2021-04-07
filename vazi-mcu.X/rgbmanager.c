@@ -10,6 +10,8 @@
 
 #include "rgbmanager.h"
 
+void clearAllRGB();
+
 void setSingleRGB(uint8_t r, uint8_t g, uint8_t b) {
     SPI1TXB = g;
     while (!SPI1STATUSbits.TXBE);
@@ -20,21 +22,28 @@ void setSingleRGB(uint8_t r, uint8_t g, uint8_t b) {
 }
 
 void handleColourChange() {
-    char read[7];
+    char read[24];
     char temp[2];
-    int rgb[3];
+    int rgb[12];
     int location=0;
-    for (int i=0; i<6; i++) {
-        read[i] = UART1_Read();
+    for (int i=0; i<24; i++) {
+        read[i] = UART1_Read(); // Copy data into `read`
     }
-    for (int i=0; i<3; i++) {
-        for (int j=0; j<2; j++) {
-            temp[j] = read[location];
-            location++;
+    for (int j=0; j<12; j++) {   // Do three times for R, G, and B
+        for (int k=0; k<2 ;k++) {    // Copy R/G/B into temp
+            temp[k] = read[location++];
         }
-        rgb[i] = atoi(temp);
+        rgb[j] = atoi(temp);
     }
-    setSingleRGB(rgb[0]*2, rgb[1]*2, rgb[2]*2);
+    for (int i=0; i<2; i++) {
+        setSingleRGB(rgb[0], rgb[1], rgb[2]);
+        setSingleRGB(rgb[3], rgb[4], rgb[5]);
+        setSingleRGB(rgb[6], rgb[6], rgb[8]);
+        setSingleRGB(rgb[9], rgb[10], rgb[11]);
+    }
+            
+    location = 0;
+    __delay_ms(1);
 }
 
 void clearAllRGB() {
@@ -42,4 +51,11 @@ void clearAllRGB() {
         setSingleRGB(0, 0, 0);
     }
     __delay_ms(1);
+}
+
+void handleUARTInput() {
+    UART1_Receive_ISR();
+    if (uart1RxCount == 24) {
+        handleColourChange();
+    }
 }

@@ -53,12 +53,11 @@
  * 
  * RGB UART Receive Schema:
  * 
- * 25 bytes
- * Byte     0       :   Clear LEDs
- * Bytes    1-6     :   RRGGBB (LED #1)
- * Bytes    7-12    :   RRGGBB (LED #2)
- * Bytes    13-18   :   RRGGBB (LED #3)
- * Bytes    19-24   :   RRGGBB (LED #4)
+ * 24 bytes
+ * Bytes    0-5     :   RRGGBB (LED #1)
+ * Bytes    6-11    :   RRGGBB (LED #2)
+ * Bytes    12-17   :   RRGGBB (LED #3)
+ * Bytes    18-23   :   RRGGBB (LED #4)
  * 
  * 
  * Button Press UART Send Schema:
@@ -97,11 +96,23 @@ void main(void)
     IOCBF3_SetInterruptHandler(handleButtonA);         // A
     IOCBF2_SetInterruptHandler(handleButtonB);         // B
     
+    // Setup UART input handling
+    UART1_SetRxInterruptHandler(handleUARTInput);
+    
     // Set power save mode operation state
     DOZE0 = 1;
     DOZE1 = 1;
     DOZE2 = 1;
-
+    
+//    setSingleRGB(100, 100, 100);
+//    setSingleRGB(0, 100, 50);
+//    setSingleRGB(100, 100, 50);
+//    setSingleRGB(255, 100, 50);
+//    setSingleRGB(50, 100, 150);
+//    setSingleRGB(0, 100, 200);
+//    setSingleRGB(75, 150, 50);
+//    setSingleRGB(255, 0, 0);
+ 
     while (1)
     {
 //        if (uart1RxCount == 25) {

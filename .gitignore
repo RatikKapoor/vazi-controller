@@ -1,3 +1,4 @@
 *.DS_Store
 /vazi-mcu.X/build/
 /vazi-mcu.X/dist/
+.vscode

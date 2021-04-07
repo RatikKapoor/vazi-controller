@@ -95,10 +95,52 @@ const Main = () => {
   };
 
   const handleSerialInput = (data: string) => {
-    console.log('GOT DATA', data);
-    if (data.includes('bp')) {
-      robot.typeString('w');
+    // console.log('GOT DATA', data);
+    const [action, button] = data.split('-');
+    console.log(action, button);
+    // if (data.includes('bp')) {
+    //   data.split
+    //   robot.typeString('w');
+    // }
+    let key = 'w';
+    switch (button) {
+      case 'up':
+        key = 'w';
+        break;
+
+      case 'down':
+        key = 's';
+        break;
+
+      case 'left':
+        key = 'a';
+        break;
+
+      case 'right':
+        key = 'd';
+        break;
+
+      case 'select':
+        key = 'q';
+        break;
+
+      case 'start':
+        key = 'escape';
+        break;
+
+      case 'a':
+        key = 'space';
+        break;
+
+      case 'b':
+        key = 'e';
+        break;
+
+      default:
+        break;
     }
+    console.log(key);
+    robot.keyToggle(key, action == 'bp' ? 'down' : 'up');
   };
 
   const connectSerialPort = () => {
