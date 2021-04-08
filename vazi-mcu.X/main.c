@@ -100,9 +100,9 @@ void main(void)
     UART1_SetRxInterruptHandler(handleUARTInput);
     
     // Set power save mode operation state
-    DOZE0 = 1;
-    DOZE1 = 1;
-    DOZE2 = 1;
+//    DOZE0 = 1;
+//    DOZE1 = 1;
+//    DOZE2 = 1;
     
 //    setSingleRGB(100, 100, 100);
 //    setSingleRGB(0, 100, 50);
@@ -115,10 +115,10 @@ void main(void)
  
     while (1)
     {
-//        if (uart1RxCount == 25) {
+//        if (uart1RxCount == 24) {
 //            handleColourChange();
 //        }
-        DOZEN = 1;
+//        DOZEN = 1;
 //        printf("Yeet");
 //        __delay_ms(1000);
     }
