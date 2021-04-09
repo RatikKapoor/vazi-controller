@@ -9,7 +9,7 @@ ser = serial.Serial('/dev/cu.usbserial-0001', 115200, timeout=0.05)
 
 
 def rgbToDec(n: int) -> int:
-    return int(n / 255 * 30)  # FIXME: Change 30 -> 99
+    return int(n / 255 * 99)  # FIXME: Change 30 -> 99
 
 
 def padRGB(rgba) -> bytes:
@@ -39,7 +39,7 @@ def handleButton(line: str) -> None:
     if button == 'right':
         key = Key.right
     if button == 'start':
-        key = Key.enter
+        key = 'z'
     if button == 'select':
         key = Key.shift_r
 
